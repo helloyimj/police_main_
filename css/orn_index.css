@@ -1,0 +1,1236 @@
+
+.container-main {
+    max-width: 125.0rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 메인 히어로 섹션 */
+.main-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.8rem;
+    padding: 3rem 0.0rem;
+    flex-wrap: wrap;
+}
+.hero-left {
+    flex: 2 2 67rem;
+    max-width: 67rem;
+}
+.hero-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.hero-right {
+    flex: 1 1 52rem;
+    max-width: 52rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+.hero-right h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #106192;
+    text-align: center;
+    margin-bottom: -1rem;
+}
+.banner-page{
+    display: flex;
+    gap: 0.3rem;
+    margin-right: 1rem;
+}
+#toggle-play{
+    margin-right: 0.7rem;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 1.7rem;
+}
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 646px;
+    height: 312px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.banner-slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.banner-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.banner-controls {
+    position: absolute;
+    bottom: 1rem;
+    right: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgb(161 205 231);
+    padding: 0.4rem 1.3rem;
+    border-radius: 20px;
+    color: #69767d;
+    z-index: 10;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.arrow-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.arrow-btn img {
+    width: 1.3rem;
+    height: 1.3rem;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(9%) saturate(406%) hue-rotate(162deg) brightness(97%) contrast(89%);
+    transition: transform 0.2s;
+}
+
+/* 방향 회전 */
+.arrow-btn.left img {
+    transform: rotate(90deg);
+}
+
+.arrow-btn.right img {
+    transform: rotate(-90deg);
+}
+
+#toggle-play.pause::after { content: "❚❚"; }
+#toggle-play.play::after { content: "▶"; }
+
+/* 검색창 */
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 0.4rem solid #1976d2;
+    border-radius: 3.2rem;
+    padding: 0 1rem;
+    background: transparent;
+}
+
+.search-box input {
+    flex: 1;
+    font-size: 1.3rem;
+    padding: 1rem 4.2rem 1rem 2rem;
+    border: none;
+    outline: none;
+    /* background: url(/img/icon/ico-main-search.png) no-repeat right 1.2rem center;  월간보고 시연위해 주석 처리 */
+    background:  no-repeat right 1.2rem center;
+    background-size: 1.9rem 1.9rem;
+}
+
+/* 월간보고 시연위해 임시 생성 */
+.search-box i {
+    flex: 1;
+    font-size: 1.3rem;
+    padding: 1rem 4.2rem 1rem 2rem;
+    border: none;
+    outline: none;
+    background: url(../img/icon/ico-main-search.png) no-repeat right 1.2rem center;
+    background-size: 1.9rem 1.9rem;
+}
+
+.search-box button img {
+    width: 2.0rem;
+    height: 2.0rem;
+}
+
+/* 태그 */
+.tag-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+.tag-box span {
+    background: #d5e5e9;
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.6rem 1.7rem;
+    border-radius: 1.0rem;
+    white-space: nowrap;
+}
+
+/* 순위 드롭다운 */
+.quick-link-dropdown {
+    position: relative;
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+.quick-link-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: #222;
+    gap: 0.4rem;
+    min-width: 20rem;
+    justify-content: space-between;
+}
+.quick-link-toggle::after {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #cccccc;
+}
+.quick-link-toggle > div{
+    display: flex;
+}
+
+.quick-link-toggle strong {
+    color: #154dd2;
+    font-weight: bold;
+    margin-right: 0.2rem;
+}
+
+.quick-link-toggle .label-text {
+    font-weight: bold;
+    max-width: 14rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.arrow-icon {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.8rem;
+    margin-left: auto;
+    background: url("../img/icon/ico-l-arrow-down.png") no-repeat center center;
+    background-size: contain;
+}
+
+/* open 시 이미지 변경 */
+.quick-link-dropdown.open .arrow-icon {
+    background-image: url("../img/icon/ico-l-arrow-up.png");
+}
+.rolling-container {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    overflow: hidden;
+    font-size: 1.4rem;
+}
+
+.rolling-slide {
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+}
+
+/* 드롭다운 리스트 */
+.dropdown-list {
+    position: absolute;
+    top: calc(100% + 0.8rem);
+    left: 0;
+    min-width: 26rem;
+    background: #ffffff;
+    border: 0.1rem solid #ccc;
+    padding: 1rem 1.4rem;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.dropdown-list li {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0.5rem 0;
+    color: #333;
+    list-style: none;
+}
+.dropdown-list li.active {
+    color: #154dd2;
+    font-weight: 600;
+}
+
+/* 사용자 힌트 */
+
+.user-tip {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #141414;
+    gap: 1.0rem;
+    justify-content: space-between;
+}
+.quick-link-title{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+.quick-link-title > p{
+    margin-left: 1rem;
+}
+.quick-link {
+    margin-left: auto;
+    color: #1976d2;
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* 민원 캐러셀 섹션 */
+.favorite-carousel {
+    position: relative;
+    padding: 4.0rem 2.0rem;
+    margin-bottom: 4rem;
+    background: #fff;
+    overflow: hidden;
+}
+
+.favorite-carousel .favorite-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.4rem;
+}
+
+.favorite-carousel .favorite-header h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.favorite-carousel .service-setting {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #666;
+    gap: 0.6rem;
+    font-weight: 700;
+}
+
+.favorite-carousel .service-setting img {
+    width: 1.5rem;
+    height: 1.4rem;
+}
+
+/* 슬라이드 영역 */
+.favorite-carousel .swiper {
+    position: relative;
+    width: calc(100% - 7.0rem);
+    box-sizing: border-box;
+    margin: 0 3.5rem;
+}
+
+.favorite-carousel .swiper-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.favorite-carousel .swiper-slide {
+    flex-shrink: 0;
+    width: 14.2857%;
+    box-sizing: border-box;
+    padding-right: 0.8rem;
+    cursor: pointer;
+}
+
+.favorite-carousel .swiper-slide:last-child {
+    margin-right: 0;
+}
+
+/* 민원 카드 */
+.favorite-carousel .service-item {
+    background: #fff;
+    border: 0.1rem solid #e0e0e0;
+    border-radius: 1.2rem;
+    padding: 2.4rem 1.0rem;
+    width: 100%;
+    height: 16.0rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* 라벨 컨테이너 */
+.favorite-carousel .label-wrap {
+    display: inline-flex;
+}
+
+/* 라벨 원형 배지 */
+.favorite-carousel .label {
+    width: 5.5rem;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    margin-bottom: 1.0rem;
+}
+
+/* 라벨 색상: 조회 */
+.favorite-carousel .green .label {
+    background: linear-gradient(0deg, #3c8343, #81c768);
+}
+
+/* 라벨 색상: 신고 */
+.favorite-carousel .orange .label {
+    background: linear-gradient(0deg, #ef6734, #f7963a);
+}
+
+/* 라벨 색상: 신청 */
+.favorite-carousel .blue .label {
+    background: linear-gradient(0deg, #375dcf, #5e91f1);
+}
+
+/* 즐겨찾기 별 아이콘 */
+.favorite-carousel .star {
+    position: absolute;
+    top: 1.0rem;
+    right: 1.0rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url('../img/icon/ico-star.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-indent: -999.9rem;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* 카드 제목 */
+.favorite-carousel .title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+
+/* 이전 버튼 */
+.favorite-carousel .swiper-button-prev {
+    position: absolute;
+    top: 63%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 3.6rem;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.favorite-carousel .swiper-button-prev {
+    width: 3.6rem;
+}
+
+/* 다음 버튼 */
+.favorite-carousel .swiper-button-next {
+    position: absolute;
+    top: 63%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.favorite-carousel .swiper-button-prev::after,
+.favorite-carousel .swiper-button-next::after {
+    font-size: 2.0rem;
+    color: #333;
+}
+
+/* 페이지 인디케이터 */
+.favorite-carousel .swiper-pagination {
+    padding-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0rem;
+    align-items: flex-start;
+}
+
+/* 인디케이터 점 */
+.favorite-carousel .swiper-pagination-bullet {
+    width: 1.1rem;
+    height: 1.1rem;
+    background: #bcbcbc;
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* 활성화된 인디케이터 */
+.favorite-carousel .swiper-pagination-bullet-active {
+    width: 3.3rem;
+    border-radius: 0.8rem;
+    background: #1e50d8;
+}
+
+
+@media (max-width: 768px) {
+    .main-hero {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .hero-left, .hero-right {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    .favorite-carousel .swiper {
+        width: 100%;
+        margin: 0;
+    }
+    .favorite-carousel .swiper-slide {
+        width: 50% !important;
+        padding-right: 0.5rem;
+    }
+    .favorite-carousel .swiper-button-prev,
+    .favorite-carousel .swiper-button-next {
+        display: none;
+    }
+}
+
+/* 사이버 범죄 */
+.cyber-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.cyber-left, .cyber-right {
+    background: #fff;
+    padding: 2rem;
+    flex: 1;
+    min-width: 300px;
+}
+
+.cyber-left h3,
+.cyber-right h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+}
+
+.cyber-action-list {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    padding: 4rem 0rem;
+}
+
+.cyber-action {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.cyber-action .circle {
+    background: #e5dcfa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.6rem;
+    cursor: pointer;
+}
+
+.cyber-action img {
+
+}
+
+.cyber-action .text{
+    font-size: 1.3rem;
+    line-height: 0px;
+    font-weight: 700;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cyber-right .title-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cyber-right .lookup-div{
+    background: #f4f4f4;
+    padding: 3rem 3rem;
+    border-radius: 0.8rem;
+}
+.cyber-right .title-area small {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.cyber-right .lookup-box {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.cyber-right .lookup-box select,
+.cyber-right .lookup-box input {
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+}
+
+.cyber-right .lookup-box input {
+    flex: 1;
+}
+
+.cyber-right .lookup-info {
+    background: #dbe7f4;
+    font-size: 1.3rem;
+    color: #333;
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid #c9c9c9;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 600;
+}
+.lookup-btn {
+    position: relative;
+    background: #0549a0;
+    color: #fff;
+    min-width: 9rem;
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 2.6rem 0.8rem 4rem;
+    border-radius: 0.7rem;
+}
+
+/* 아이콘 삽입 */
+.lookup-btn::after {
+    content: "";
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("../img/icon/ico-main-search.png") no-repeat center center;
+    background-size: contain;
+    filter: brightness(0) invert(1); /* ✅ 흰색처럼 보이게 */
+    pointer-events: none;
+}
+.select-wrap {
+    position: relative;
+    display: inline-block;
+    width: 16rem;
+}
+
+.select-wrap select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 0.8rem 3rem 0.8rem 1rem; /* 오른쪽 여백 확보 */
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 0.6rem;
+    background: #ffffff;
+    color: #333;
+    cursor: pointer;
+}
+
+/* ✅ after로 화살표 아이콘 삽입 */
+.select-wrap::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.6rem;
+    height: 2rem;
+    background: url("../img/icon/ico-l-arrow-down.png") no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+}
+
+
+
+/* 유실물, 누리캅스 */
+
+.lostnfound-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.lostnfound-left, .lostnfound-right {
+    background: #fff;
+    padding: 2rem;
+    flex: 1;
+    min-width: 300px;
+}
+
+.lostnfound-left h3,
+.lostnfound-right h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+}
+
+/* 유실물 아이콘 리스트 */
+.lostnfound-action-list {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    padding: 4rem 0rem;
+}
+
+.lostnfound-action {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.lostnfound-action .circle {
+    background: #cae6f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.6rem;
+    cursor: pointer;
+}
+
+.lostnfound-action .circle img {
+
+}
+
+.lostnfound-action .text {
+    font-size: 1.3rem;
+    line-height: 0px;
+    font-weight: 700;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 누리캅스 우측 */
+.lostnfound-right .title-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lostnfound-right .title-area small {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 700;
+}
+.lostnfound-right .lostnfound-right-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #e7e7e7;
+    flex: 1;
+    margin: 0 0.4rem;
+}
+
+.lostnfound-right .text{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+.lostnfound-right .lookup-div {
+    background: #f4f4f4;
+    padding: 3rem;
+    border-radius: 0.8rem;
+}
+
+.lostnfound-right .lookup-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin: 1.4rem 0rem;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.lostnfound-right .lookup-btn {
+    flex: 1;
+    min-width: 12rem;
+    padding: 0.8rem 1.2rem;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 0.6rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.lostnfound-right .lookup-btn:hover {
+    background: #eef4fb;
+}
+
+.lostnfound-right .lookup-info {
+    background: #dbe7f4;
+    font-size: 1.3rem;
+    color: #333;
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid #c9c9c9;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+/* 이용안내, 순찰신문고 */
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 20px;
+    margin: 4rem 0;
+}
+
+.info-guide, .patrol-report {
+    flex: 1 1 48%;
+    padding: 2rem;
+    border-radius: 1.2rem;
+}
+
+.info-guide h3,
+.patrol-report h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+}
+
+.guide-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.guide-card {
+    border-radius: 1rem;
+    padding: 2rem;
+    flex: 1 1 30%;
+    background: #f3f1f0;
+}
+
+.guide-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+    text-align: center;
+}
+
+.guide-card p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.guide-card button {
+    background: #6a6a6a;
+    color: white;
+    border: none;
+    padding: 0.3rem 3.2rem;
+    border-radius: 0.7rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.patrol-report .report-box{
+    background: #f4f4f4;
+    padding: 4rem;
+    border-radius: 0.8rem;
+}
+.patrol-report .report-box p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.search-form .search-btn {
+    background: #004c70;
+    color: white;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.search-form .search-btn img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+
+/* 공지사항, 민원서식 */
+
+.notice-forms-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 20px;
+    margin: 4rem 0;
+}
+
+.notice-area{
+    flex: 1 1 48%;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    display: flex;
+}
+.notice-area > div{
+    flex: 1;
+    margin-right: 3rem;
+}
+.notice-area > div:last-child{
+    margin-right: unset;
+}
+.safety-image {
+    padding: 2rem;
+    border-radius: 1.2rem;
+}
+
+.safety-image img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+}
+
+.safety-text h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 1rem 0 0.5rem;
+    color: #004a75;
+}
+
+.safety-text p {
+    font-size: 1.4rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.section-header h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.section-header a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #106192;
+    text-decoration: none;
+}
+
+.notice-list li,
+.form-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-bottom: 1px solid #eeeeee;
+    color: #222;
+    padding: 1.4rem 0;
+}
+
+.notice-list img,
+.form-list img {
+    width: 1.6rem;
+    height: auto;
+    margin-right: 0.8rem;
+}
+.notice-list > li > span,
+.form-list > li > span {
+    margin-left: 1rem;
+}
+section:last-child{
+    padding-top: 3rem;
+    position: relative;
+}
+section:last-child::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    border-top: 0.1rem solid #dedede;
+    width: 100%;
+    max-width: 121rem;
+}
+
+/* 경찰 민원 채널 */
+.channel-section {
+    padding: 2rem;
+    position: relative;
+}
+
+.channel-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.channel-carousel-wrap {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 3.5rem;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.channel-carousel {
+    display: flex;
+    scroll-behavior: smooth;
+    gap: 1.5rem;
+    padding: 1rem 0rem;
+}
+
+.channel-item {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+.channel-item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.channel-item.swiper-slide {
+    width: auto !important;
+    max-width: 28.8rem;
+    flex-shrink: 0 !important;
+    cursor: pointer;
+}
+
+.channel-btn {
+    position: absolute;
+    top: 63%;
+    transform: translateY(-50%);
+    width: 4.4rem;
+    height: 4.4rem;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.channel-btn.left {
+    left: 0;
+}
+
+.channel-btn.right {
+    right: 0;
+}
+
+.channel-btn img {
+    width: 2.4rem;
+    height: 2.4rem;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(9%) saturate(406%) hue-rotate(162deg) brightness(97%) contrast(89%);
+}
+
+.channel-btn.left img {
+    transform: rotate(90deg);
+}
+
+.channel-btn.right img {
+    transform: rotate(-90deg);
+}
+
+.channel-carousel.swiper-wrapper {
+    width: auto !important;
+}
+
+/* 우측 퀵메뉴 */
+.floating-menu {
+    position: fixed;
+    top: 32rem; /* 320px 기준 */
+    right: calc((100% - 1280px) / 2 - 20rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    z-index: 9999;
+    transition: top 0.3s ease;
+}
+
+
+
+.floating-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 9999px;
+    padding: 0.6rem 1.2rem 0.6rem 1.6rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 16.3rem;
+    height: 4.6rem;
+    position: relative;
+}
+
+.floating-btn .label {
+    color: #000;
+    z-index: 2;
+    margin-right: 4rem;
+}
+
+.floating-btn .icon {
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-right: -1rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 1.2rem;
+    flex-shrink: 0;
+    position: absolute;
+    right: 0;
+}
+
+.floating-btn.police .icon {
+    background-color: #4979f2;
+    background-image: url('../img/icon/ico-main-quick-find.png');
+}
+
+.floating-btn.chat .icon {
+    background-color: #00b9d6;
+    background-image: url('../img/icon/ico-main-quick-chat.png');
+}
+
+.floating-btn.patrol .icon {
+    background-color: #466efb;
+    background-image: url('../img/icon/ico-main-quick-patrol.png');
+}
+.floating-btn.top .icon {
+    background-color: #466efb;
+    background-image: url('../img/icon/ico-main-quick-top.png');
+}
+
+.floating-btn.top {
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 50%;
+    padding: 0;
+    justify-content: center;
+}
+.floating-btn.top:last-child{
+    border: unset;
+}
+.floating-btn.top .icon.only {
+
+}
+

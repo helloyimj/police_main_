@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <path data-name="사각형 12212" style="fill:none;opacity:.3" d="M0 0h20v20H0z"/>
+    <g data-name="그룹 265">
+        <path data-name="타원 5" d="M7.855 1.885a5.97 5.97 0 1 0 5.97 5.97 5.977 5.977 0 0 0-5.97-5.97m0-1.885A7.855 7.855 0 1 1 0 7.855 7.855 7.855 0 0 1 7.855 0z" style="fill:#006ae2" transform="translate(.628 .628)"/>
+        <path data-name="선 8" d="M3.841 4.784a.94.94 0 0 1-.667-.276l-4.4-4.4a.943.943 0 0 1 0-1.333.943.943 0 0 1 1.333 0l4.4 4.4a.943.943 0 0 1-.667 1.609z" transform="translate(14.696 14.068)" style="fill:#006ae2"/>
+    </g>
+</svg>

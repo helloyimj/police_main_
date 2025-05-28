@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "PretendarExtraBold";
+    src:
+        url(../fonts/PretendardGOV-ExtraBold.otf) format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PretendardBold";
+    src:
+        url(../fonts/PretendardGOV-Bold.otf) format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PretendardSemiBold";
+    src:
+        url(../fonts/PretendardGOV-SemiBold.otf) format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PretendardMedium";
+    src:
+        url(../fonts/PretendardGOV-Medium.otf) format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PretendardRegular";
+    src:
+        url(../fonts/PretendardGOV-Regular.otf) format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PretendardLight";
+    src:
+        url(../fonts/Pretendard-Light.otf) format("opentype");
+    font-style: normal;
+}

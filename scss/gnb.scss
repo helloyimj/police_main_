@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+:root {
+	--krds-contents-wrap-size: 1280px;
+    --krds-contents-size: 1280px;
+
+    // --krds-font-family-base: var(--krds-typo-font-type);
+    // --krds-font-size-base: 62.5%;
+    // --krds-line-height-none: 1;
+    // --krds-line-height-base: 1.5;
+    // --krds-letter-spacing-none: var(--krds-typo-letter-spacing-0);
+    // --krds-letter-spacing-wide: var(--krds-typo-letter-spacing-1);
+    // --krds-font-weight-regular: 400;
+    // --krds-font-weight-bold: 700;
+    // --krds-transition-base: 0.4s ease-in-out;
+    // --krds-transition-fade: opacity 0.4s linear;
+    // --krds-transition-collapse: max-height 0.4s ease;
+    // --krds-transition-collapse-width: width 0.4s ease;
+    // --krds-contents-padding-x: 24px;
+
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1657a6;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.krds-btn.text,
+#krds-header .header-container .btn-navi {
+  color: #111;
+}
+
+.krds-main-menu .gnb-menu .gnb-main-trigger {
+  color: #1d1d1d;
+    gap: 1.2rem;
+	    //   &::after {
+      //   width: 1.2rem;
+      //   height: .7rem;
+      // }
+			
+}
+
+
+
+#krds-masthead .toggle-head .inner {
+  padding: 0;
+  min-height: 3rem;
+}
+#krds-header .header-container .logo {
+}
+
+.krds-main-menu {
+
+    --krds-main-menu--main-trigger-size-height: 6.1rem;
+
+
+  .gnb-menu {
+         &::after {
+        width: 1.2rem;
+        height: .8rem;
+        // /ico_angle.svg
+        -webkit-mask-image: url(../img/gnb/icon_arrow.svg);
+        mask-image: url(../img/gnb/icon_arrow.svg);
+        background-color: #1d1d1d;
+         fill: #1d1d1d;
+      }
+    }
+  }
+
+
+	@media (min-width: 1024px) {
+  #krds-header .header-container .inner {
+		gap: 1.2rem;
+		padding-left: 0;
+		padding-right: 0;
+    padding-top: .9rem;
+    padding-bottom: 1.1rem;
+  }
+}
+
+.krds-main-menu .gnb-toggle-wrap .gnb-main-list > ul {
+	padding-top: 3rem;
+	padding-bottom: 6rem;
+}
+
+
+// @media (max-width: 1023px) {
+//     #krds-header .inner {
+//         max-width: 100%;
+//     }
+// }
+
+
+/* 플로팅 버튼 */
+.floating-btn.top {
+	background: none;
+
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+/* GNB Mob */
+@media all and (max-width: 481px) {
+
+  #krds-header .header-container .logo {
+    height: auto;
+  }
+
+#krds-header .header-container .btn-navi.navi-row {
+  &.sch,
+  &.login {
+    display: none;
+    &::before {
+      display: none;
+
+    }
+  }
+
+}
+
+
+
+}
