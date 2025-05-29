@@ -506,13 +506,13 @@ html, body {
 	.circle {
 			width: 8.1rem;
 			height: 8.1rem;
-			border: 1px solid #636363;
-    background-color: #fff;
+			border: 1px solid #77777777;
+    background-color: #dbfdfc;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 0.6rem;
+    // margin: 0 auto;
     cursor: pointer;
 		
 		img {
@@ -522,7 +522,10 @@ html, body {
 		}
 
   .text {
-    margin-top: 1.3rem;
+    margin-top: .8rem;
+    span {
+      font-size: 1.8rem;
+    }
   }
 
   // .lookup-div {
@@ -1098,10 +1101,20 @@ html, body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin: 0 auto 0.6rem;
+    // margin: 0 auto 0.6rem;
     cursor: pointer;
     width: 7.4rem;
     height: 7.4rem;
+    flex-shrink: 0;
+
+    position: relative;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
   }
 
 
@@ -2789,7 +2802,7 @@ html, body {
 	.circle {
 			width: 5.3rem;
 			height: 5.3rem;
-    margin: 0 auto 0.6rem;
+    // margin: 0 auto 0.6rem;
 		
 		img {
 			width: 90%;
@@ -2799,6 +2812,10 @@ html, body {
   .text {
     margin-top: 0.8rem;
     font-size: 1.4rem;
+    span {
+      font-size: 1.4rem;
+
+    }
   }
 
   .lookup-btn {
