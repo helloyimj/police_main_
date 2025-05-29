@@ -201,15 +201,17 @@ html, body {
 
 .banner-page {
   display: flex;
+  flex: 0;
   gap: 0.3rem;
   margin-right: 1rem;
 }
 
 #toggle-play {
-  margin-right: 0.7rem;
+  margin-right: 0.6rem;
   background-color: #fff;
   border-radius: 50%;
-  width: 1.7rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 .banner-container {
