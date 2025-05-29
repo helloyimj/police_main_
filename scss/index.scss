@@ -125,7 +125,7 @@ html, body {
 
 .hero-left {
   // flex: 1 1 64.6rem;
-  flex: 1 1;
+  flex: 1 0;
   width: 64.6rem;
 
   img {
@@ -1411,7 +1411,7 @@ html, body {
 
 .floating-menu {
   position: fixed;
-  top: 32rem;
+  // top: 32rem;
 
   /* 320px 기준 */
   right: calc((100% - 1280px) / 2 - 28rem);
@@ -1554,10 +1554,17 @@ html, body {
     gap: 3%;
   }
 
-  .hero-right h2 {
-    font-size: 2.8rem;
-}
+  .hero-right {
+      // flex: 1 1;
 
+    h2 {
+      font-size: 2.8rem;
+  }
+  } 
+  
+  // .hero-left {
+  //   flex: 1 1;
+  // }
 
 .wrap_grid {
   grid-template-columns: 45% 52%;
@@ -1747,7 +1754,7 @@ html, body {
     flex-direction: column;
     gap: 2.8rem;
 
-    align-items: unset;
+    // align-items: unset;
     padding-top: 1.2rem;
     padding-bottom: 5.6rem;
   }
@@ -1755,7 +1762,8 @@ html, body {
   .hero-left {
     order: 1; 
     // padding-bottom: calc(310 / 646 * 100%);
-    flex: 2 2 0;
+    // flex: 2 2 0;
+    width: 100%;
 
 .banner-container {
     max-width: 100%;
