@@ -54,15 +54,16 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 5.8rem;
+  gap: 6.5rem;
   padding-top: 3.6rem;
   padding-bottom: 5rem;
 }
 
 .hero-left {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 2 64.6rem;
-          flex: 2 2 64.6rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  width: 64.6rem;
 }
 .hero-left img {
   width: 100%;
@@ -72,9 +73,8 @@ span {
 
 .hero-right {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 52rem;
-          flex: 1 1 52rem;
-  max-width: 52rem;
+      -ms-flex: 1 1;
+          flex: 1 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,9 +85,10 @@ span {
   gap: 2.4rem;
 }
 .hero-right h2 {
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   color: #106192;
   text-align: center;
+  font-family: "PretendardBold", sans-serif;
 }
 
 .banner-page {
@@ -1513,7 +1514,7 @@ span {
     width: 100%;
   }
 }
-@media (max-width: 1024px) {
+@media all and (max-width: 1024px) {
   .container-main {
     padding-left: 1.2rem;
     padding-right: 1.2rem;

@@ -654,7 +654,8 @@
   --krds-pc-font-size-heading-xxsmall: 1.5rem;
   --krds-pc-font-size-heading-xlarge: 4rem;
   --krds-pc-font-size-navigation-title-medium: 2.4rem;
-  --krds-pc-font-size-navigation-title-small: 1.9rem;
+  --krds-pc-font-size-navigation-title-small: 2.1rem;
+  /* --krds-pc-font-size-navigation-title-small: 1.9rem; */
   --krds-pc-font-size-navigation-depth-medium-bold: 1.7rem;
   --krds-pc-font-size-navigation-depth-medium: 1.7rem;
   --krds-pc-font-size-navigation-depth-small-bold: 1.5rem;

@@ -117,14 +117,16 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5.8rem;
+  gap: 6.5rem;
   padding-top: 3.6rem;
   padding-bottom: 5rem;
   // flex-wrap: wrap;
 }
 
 .hero-left {
-  flex: 2 2 64.6rem;
+  // flex: 1 1 64.6rem;
+  flex: 1 1;
+  width: 64.6rem;
 
   img {
     width: 100%;
@@ -134,17 +136,20 @@ html, body {
 }
 
 .hero-right {
-  flex: 1 1 52rem;
-  max-width: 52rem;
+  flex: 1 1;
+  // width: 58rem;
+  // max-width: 58rem;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
 
   h2 {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     // // font-weight: 700;
     color: #106192;
     text-align: center;
+  font-family: "PretendardBold", sans-serif;
+
     // margin-bottom: -1rem;
   }
 }
@@ -1676,7 +1681,7 @@ html, body {
 
 // }
 
-@media (max-width: 1024px) {
+@media all and (max-width: 1024px) {
   
   .container-main {
     // max-width: unset;

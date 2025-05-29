@@ -35,6 +35,15 @@
       flex-shrink: 0;
 }
 
+@media all and (max-width: 1024px) {
+  .logo-image {
+    width: 3.8rem;
+    height: var(--krds-size-height-6);
+  }
+  .logo-text {
+    font-size: 1.6rem;
+  }
+}
 /* 스크롤 시 헤더를 메뉴 높이만큼 남기고 숨김 */
 /*
 #wrap.scroll-down #krds-header:not(.sample) .header-in {
@@ -137,6 +146,10 @@ a:visited.visited, a:visited .visited {
 .krds-main-menu .inner {
   padding-left: 0;
   padding-right: 0;
+}
+.krds-main-menu .gnb-menu .gnb-main-trigger .h2 {
+  font-size: var(--krds-main-menu--main-trigger-font-size);
+  font-weight: var(--krds-font-weight-bold);
 }
 .krds-main-menu .gnb-menu .gnb-main-trigger::before {
   left: 0;
