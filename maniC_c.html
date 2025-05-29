@@ -21,7 +21,7 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <!-- <link href="css/index.css" type="text/css" rel="stylesheet" /> -->
     <link href="css/gnb.css" type="text/css" rel="stylesheet" />
-    <link href="css/mainb.css" type="text/css" rel="stylesheet" />
+    <link href="css/mainc.css" type="text/css" rel="stylesheet" />
 
     <!-- script -->
     <script src="js/plugin/swiper-bundle.min.js"></script>
@@ -696,11 +696,44 @@
                 <!-- 상단 배너 및 검색 -->
                 <section class="main-hero">
 
-                    <div class="wrap_box_txt">
-                        <h2>책임을 다하는 국민의 경찰</h2>
-                        <h3>24시간 함께하는 경찰민원 24 홈서비스</h3>
-                    </div>
                     <div class="hero-left">
+                        <h2>필요한 경찰민원 서비스를 이용하세요 !</h2>
+												<h3>내게 필요한 경찰민원서비스를 <br>이용하실 수 있습니다.</h3>
+												<button type="button" class="" onclick="javascript:;">로그인</button>
+                        <!-- <div class="search-box">  월간보고 시연위해 주석 처리
+                    <input type="text" placeholder="검색으로 제공중인 경찰민원 서비스를 찾아보세요." aria-label="검색">
+                </div> -->
+
+                        <div class="search-box">
+                            <input type="text" placeholder="찾으시는 민원 서비스를 검색하세요." aria-label="검색" aria-label="검색" title="검색어 입력" onkeydown="if(event.key === 'Enter') f_searchCvlcptServiceList(this);">
+                            <button type="button" class="" onclick="f_searchCvlcptServiceList(this);">
+                                <span class="sr-only">검색</span>
+                                <i></i>
+                            </button>
+                        </div>
+
+                        <div class="search-box row">
+                            <input type="text" placeholder="검색으로 제공중인 경찰민원 서비스를 찾아보세요." aria-label="검색" aria-label="검색" title="검색어 입력" onkeydown="if(event.key === 'Enter') f_searchCvlcptServiceList(this);">
+                            <button type="button" class="" onclick="f_searchCvlcptServiceList(this);">
+                                <span class="sr-only">검색</span>
+                                <i></i>
+                            </button>
+                        </div>
+
+                        <div class="user-tip">
+                            <div class="quick-link-title">
+                                <img src="img/icon/ico-fre.png" alt="사용자 아이콘">
+                                <p>사용자가 자주찾는 경찰 민원 입니다.</p>
+                            </div>
+                            <div class="quick-link-dropdown">
+                                <div class="quick-link-toggle" onclick="toggleDropdown(this)">
+                                    <div class="rolling-container"></div>
+                                    <div><span class="arrow-icon"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+											<div class="hero-left hero-right">
                         <div class="banner-container">
                             <div class="banner-slide active">
                                 <img src="tmp/main-banner3_2.png" alt="">
@@ -708,7 +741,6 @@
                             <div class="banner-slide">
                                 <img src="tmp/main-banner3_3.png" alt="">
                             </div>
-
                             <div class="banner-controls">
                                 <span class="banner-page"><span id="current-page">1</span> / <span id="total-page">2</span></span>
                                 <button id="toggle-play" class="pause"></button>
@@ -720,57 +752,6 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="hero-right">
-                        <!-- <h2>필요한 경찰민원 서비스를 이용하세요 !</h2> -->
-                        <!-- <div class="search-box">  월간보고 시연위해 주석 처리
-                    <input type="text" placeholder="검색으로 제공중인 경찰민원 서비스를 찾아보세요." aria-label="검색">
-                </div> -->
-                        <div class="search-box">
-                            <input type="text" placeholder="필요한 경찰민원 서비스를 찾아보세요." aria-label="검색" aria-label="검색" title="검색어 입력" onkeydown="if(event.key === 'Enter') f_searchCvlcptServiceList(this);">
-                            <button type="button" class="" onclick="f_searchCvlcptServiceList(this);">
-                                <span class="sr-only">검색</span>
-                                <i></i>
-                            </button>
-                        </div>
-
-                        <div class="user-tip">
-                            <div class="quick-link-title">
-                                <img src="img/icon/icon_dot.png" alt="사용자 아이콘">
-                                <p>사용자가 자주찾는 경찰 민원 입니다.</p>
-                            </div>
-                            <div class="quick-link-dropdown">
-                                <div class="quick-link-toggle" onclick="toggleDropdown(this)">
-                                    <div class="rolling-container"></div>
-                                    <div><span class="arrow-icon"></span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 민원 신청  -->
-                        <div class="wrap_hero_btn">
-                            <div class="hero_btns">
-                                <a class="hero_btn">
-                                    <div class="circle">
-                                        <img src="img/icon/mainb/b1.png" alt="">
-                                    </div>
-                                    <div class="text"><span>민원신청</span></div>
-                                </a>
-                                <a class="hero_btn">
-                                    <div class="circle">
-                                        <img src="img/icon/mainb/b2.png" alt="">
-                                    </div>
-                                    <div class="text"><span>민원결과</span></div>
-                                </a>
-                                <a class="hero_btn">
-                                    <div class="circle">
-                                        <img src="img/icon/mainb/b3.png" alt="">
-                                    </div>
-                                    <div class="text"><span>민원상담</span></div>
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
                 </section>
 

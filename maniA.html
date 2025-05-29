@@ -19,9 +19,9 @@
 
     <link href="css/plugin/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
     <link href="css/style.css" type="text/css" rel="stylesheet" />
-    <!-- <link href="css/index.css" type="text/css" rel="stylesheet" /> -->
     <link href="css/gnb.css" type="text/css" rel="stylesheet" />
-    <link href="css/mainb.css" type="text/css" rel="stylesheet" />
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <!-- <link href="css/responsive.css" type="text/css" rel="stylesheet" /> -->
 
     <!-- script -->
     <script src="js/plugin/swiper-bundle.min.js"></script>
@@ -29,6 +29,7 @@
     <script defer src="js/component/ui-script.js"></script>
     <script src="js/pattern/pattern.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- <script src="../code.jquery.com/jquery-3.6.4.min.js"></script> -->
     <script src="js/functions.js"></script>
     <script src="js/common.js"></script>
 
@@ -485,7 +486,7 @@
                         <!-- gnb-login -->
                         <div class="gnb-login">
                             <!-- <span class="user">홍길동님</span>
-                                <button type="button" class="krds-btn large text"><i class="svg-icon ico-logout"></i> 로그아웃</button> -->
+                                          <button type="button" class="krds-btn large text"><i class="svg-icon ico-logout"></i> 로그아웃</button> -->
                             <button type="button" class="krds-btn large text">
                                 <i class="svg-icon ico-log"></i>
                                 로그인을 해주세요
@@ -695,20 +696,14 @@
             <div class="container-main">
                 <!-- 상단 배너 및 검색 -->
                 <section class="main-hero">
-
-                    <div class="wrap_box_txt">
-                        <h2>책임을 다하는 국민의 경찰</h2>
-                        <h3>24시간 함께하는 경찰민원 24 홈서비스</h3>
-                    </div>
                     <div class="hero-left">
                         <div class="banner-container">
                             <div class="banner-slide active">
-                                <img src="tmp/main-banner3_2.png" alt="">
+                                <img src="tmp/main-banner3.png" alt="">
                             </div>
                             <div class="banner-slide">
-                                <img src="tmp/main-banner3_3.png" alt="">
+                                <img src="tmp/main-banner.png" alt="">
                             </div>
-
                             <div class="banner-controls">
                                 <span class="banner-page"><span id="current-page">1</span> / <span id="total-page">2</span></span>
                                 <button id="toggle-play" class="pause"></button>
@@ -722,21 +717,30 @@
                         </div>
                     </div>
                     <div class="hero-right">
-                        <!-- <h2>필요한 경찰민원 서비스를 이용하세요 !</h2> -->
+                        <h2>필요한 경찰민원 서비스를 이용하세요 !</h2>
                         <!-- <div class="search-box">  월간보고 시연위해 주석 처리
                     <input type="text" placeholder="검색으로 제공중인 경찰민원 서비스를 찾아보세요." aria-label="검색">
                 </div> -->
                         <div class="search-box">
-                            <input type="text" placeholder="필요한 경찰민원 서비스를 찾아보세요." aria-label="검색" aria-label="검색" title="검색어 입력" onkeydown="if(event.key === 'Enter') f_searchCvlcptServiceList(this);">
+                            <input type="text" placeholder="검색으로 제공중인 경찰민원 서비스를 찾아보세요." aria-label="검색" aria-label="검색" title="검색어 입력" onkeydown="if(event.key === 'Enter') f_searchCvlcptServiceList(this);">
                             <button type="button" class="" onclick="f_searchCvlcptServiceList(this);">
                                 <span class="sr-only">검색</span>
                                 <i></i>
                             </button>
                         </div>
-
+                        <div class="tag-box">
+                            <span># 전체민원</span>
+                            <span># 교통,경비</span>
+                            <span># 수사, 경무</span>
+                            <span># 생활,안전</span>
+                            <span># 실종아동</span>
+                            <span># 분실습득,청원경찰</span>
+                            <span># 범죄수사</span>
+                            <span># 총포 화약</span>
+                        </div>
                         <div class="user-tip">
                             <div class="quick-link-title">
-                                <img src="img/icon/icon_dot.png" alt="사용자 아이콘">
+                                <img src="img/icon/ico-fre.png" alt="사용자 아이콘">
                                 <p>사용자가 자주찾는 경찰 민원 입니다.</p>
                             </div>
                             <div class="quick-link-dropdown">
@@ -746,31 +750,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- 민원 신청  -->
-                        <div class="wrap_hero_btn">
-                            <div class="hero_btns">
-                                <a class="hero_btn">
-                                    <div class="circle">
-                                        <img src="img/icon/mainb/b1.png" alt="">
-                                    </div>
-                                    <div class="text"><span>민원신청</span></div>
-                                </a>
-                                <a class="hero_btn">
-                                    <div class="circle">
-                                        <img src="img/icon/mainb/b2.png" alt="">
-                                    </div>
-                                    <div class="text"><span>민원결과</span></div>
-                                </a>
-                                <a class="hero_btn">
-                                    <div class="circle">
-                                        <img src="img/icon/mainb/b3.png" alt="">
-                                    </div>
-                                    <div class="text"><span>민원상담</span></div>
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
                 </section>
 
@@ -784,119 +763,144 @@
                         </div>
                     </div>
 
-                    <div class="wrap_slide">
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="service-item green" onclick="location.href='cvlcptDtl7778.html?cvlaId=MW-780'">
-                                        <span class="star" aria-hidden="true">★</span>
-                                        <div class="label-wrap">
-                                            <span class="label">조회</span>
-                                        </div>
-                                        <div class="title">범칙금<br>조회</div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="service-item green" onclick="location.href='cvlcptDtl7778.html?cvlaId=MW-780'">
+                                    <span class="star" aria-hidden="true">★</span>
+                                    <div class="label-wrap">
+                                        <span class="label">조회</span>
                                     </div>
+                                    <div class="title">범칙금<br>조회</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item green" onclick="location.href='cvlcptDtld3ea.html?cvlaId=MW-777'">
-                                        <span class="star" aria-hidden="true">★</span>
-                                        <div class="label-wrap">
-                                            <span class="label">조회</span>
-                                        </div>
-                                        <div class="title">미납과태료<br>조회</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item green" onclick="location.href='cvlcptDtld3ea.html?cvlaId=MW-777'">
+                                    <span class="star" aria-hidden="true">★</span>
+                                    <div class="label-wrap">
+                                        <span class="label">조회</span>
                                     </div>
+                                    <div class="title">미납과태료<br>조회</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item green">
-                                        <div class="label-wrap">
-                                            <span class="label">조회</span>
-                                        </div>
-                                        <div class="title">분실물<br>찾기</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item green">
+                                    <div class="label-wrap">
+                                        <span class="label">조회</span>
                                     </div>
+                                    <div class="title">분실물<br>찾기</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item orange">
-                                        <div class="label-wrap">
-                                            <span class="label">신고</span>
-                                        </div>
-                                        <div class="title">유실물<br>신고</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item orange">
+                                    <div class="label-wrap">
+                                        <span class="label">신고</span>
                                     </div>
+                                    <div class="title">유실물<br>신고</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item blue">
-                                        <div class="label-wrap">
-                                            <span class="label">신청</span>
-                                        </div>
-                                        <div class="title">범칙금<br>이의신청</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item blue">
+                                    <div class="label-wrap">
+                                        <span class="label">신청</span>
                                     </div>
+                                    <div class="title">범칙금<br>이의신청</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item blue">
-                                        <div class="label-wrap">
-                                            <span class="label">신청</span>
-                                        </div>
-                                        <div class="title">수사민원<br>신청</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item blue">
+                                    <div class="label-wrap">
+                                        <span class="label">신청</span>
                                     </div>
+                                    <div class="title">수사민원<br>신청</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item orange">
-                                        <div class="label-wrap">
-                                            <span class="label">신고</span>
-                                        </div>
-                                        <div class="title">제보하기<br>상담</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item orange">
+                                    <div class="label-wrap">
+                                        <span class="label">신고</span>
                                     </div>
+                                    <div class="title">제보하기<br>상담</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item green">
-                                        <div class="label-wrap">
-                                            <span class="label">조회</span>
-                                        </div>
-                                        <div class="title">범칙금<br>조회</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item green">
+                                    <div class="label-wrap">
+                                        <span class="label">조회</span>
                                     </div>
+                                    <div class="title">범칙금<br>조회</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item green">
-                                        <div class="label-wrap">
-                                            <span class="label">조회</span>
-                                        </div>
-                                        <div class="title">미납과태료<br>조회</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item green">
+                                    <div class="label-wrap">
+                                        <span class="label">조회</span>
                                     </div>
+                                    <div class="title">미납과태료<br>조회</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item green">
-                                        <div class="label-wrap">
-                                            <span class="label">조회</span>
-                                        </div>
-                                        <div class="title">분실물<br>찾기</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item green">
+                                    <div class="label-wrap">
+                                        <span class="label">조회</span>
                                     </div>
+                                    <div class="title">분실물<br>찾기</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item orange">
-                                        <div class="label-wrap">
-                                            <span class="label">신고</span>
-                                        </div>
-                                        <div class="title">유실물<br>신고</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item orange">
+                                    <div class="label-wrap">
+                                        <span class="label">신고</span>
                                     </div>
+                                    <div class="title">유실물<br>신고</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="service-item blue">
-                                        <div class="label-wrap">
-                                            <span class="label">신청</span>
-                                        </div>
-                                        <div class="title">범칙금<br>이의신청</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="service-item blue">
+                                    <div class="label-wrap">
+                                        <span class="label">신청</span>
                                     </div>
+                                    <div class="title">범칙금<br>이의신청</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-button-prev carousel-button left"></div>
-                        <div class="swiper-button-next carousel-button right"></div>
-                        <div class="swiper-pagination carousel-indicators"></div>
                     </div>
+                    <div class="swiper-button-prev carousel-button left"></div>
+                    <div class="swiper-button-next carousel-button right"></div>
+                    <div class="swiper-pagination carousel-indicators"></div>
                 </section>
 
                 <section class="wrap_grid">
                     <!-- 사이버 범죄 -->
                     <!-- <section class="cyber-wrap"> -->
-                    <div class="cyber-right box_left">
+
+                    <!-- 왼쪽 -->
+                    <div class="cyber-left box_left">
+                        <h3 class="box_title">사이버 범죄 신고/상담/제보</h3>
+                        <div class="cyber-action-list">
+                            <a href="javascript:;" class="cyber-action">
+                                <div class="circle">
+                                    <img src="img/icon/ico-main-re.png" alt="신고하기">
+                                </div>
+                                <div class="text"><span>신고</span><span>하기</span></div>
+                            </a>
+                            <a href="javascript:;" class="cyber-action">
+                                <div class="circle">
+                                    <img src="img/icon/ico-main-co.png" alt="상담하기">
+                                </div>
+                                <div class="text"><span>상담</span><span>하기</span></div>
+                            </a>
+                            <a href="javascript:;" class="cyber-action">
+                                <div class="circle">
+                                    <img src="img/icon/ico-main-tip.png" alt="제보하기">
+                                </div>
+                                <div class="text"><span>제보</span><span>하기</span></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 오른쪽 -->
+                    <div class="cyber-right box_right">
                         <div class="title-area">
                             <h3 class="box_title">사이버사기 피해신고 이력조회</h3>
                             <small>* 거래대상 전화/계좌번호 등 사이버 사기피해 신고여부 확인</small>
@@ -920,36 +924,38 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cyber-left box_right">
-                        <h3 class="box_title">사이버 범죄 신고/상담/제보</h3>
-                        <div class="cyber-action-list">
-                            <a href="javascript:;" class="cyber-action">
-                                <div class="circle">
-                                    <img src="img/icon/icon_main_cyber01.png" alt="신고하기">
-                                </div>
-                                <div class="text"><span>신고</span><span>하기</span></div>
-                            </a>
-                            <a href="javascript:;" class="cyber-action">
-                                <div class="circle">
-                                    <img src="img/icon/icon_main_cyber02.png" alt="상담하기">
-                                </div>
-                                <div class="text"><span>상담</span><span>하기</span></div>
-                            </a>
-                            <a href="javascript:;" class="cyber-action">
-                                <div class="circle">
-                                    <img src="img/icon/icon_main_cyber03.png" alt="제보하기">
-                                </div>
-                                <div class="text"><span>제보</span><span>하기</span></div>
-                            </a>
-                        </div>
-                    </div>
-
                     <!-- </section> -->
 
                     <!-- 유실물 민원, 누리캅스 -->
                     <!-- <section class="lostnfound-wrap"> -->
+
+                    <!-- 유실물 민원 -->
+                    <div class="lostnfound-left box_left">
+                        <h3 class="box_title">유실물 민원</h3>
+                        <div class="lostnfound-action-list">
+                            <a href="javascript:;" class="lostnfound-action">
+                                <div class="circle">
+                                    <img src="img/icon/ico-main-rost-re.png" alt="분실물 신고">
+                                </div>
+                                <div class="text"><span>분실물</span><span>신고</span></div>
+                            </a>
+                            <a href="javascript:;" class="lostnfound-action">
+                                <div class="circle">
+                                    <img src="img/icon/ico-main-rost-se.png" alt="습득물 검색">
+                                </div>
+                                <div class="text"><span>습득물</span><span>검색</span></div>
+                            </a>
+                            <a href="javascript:;" class="lostnfound-action">
+                                <div class="circle">
+                                    <img src="img/icon/ico-main-rost-st.png" alt="습득물 현황">
+                                </div>
+                                <div class="text"><span>습득물</span><span>현황</span></div>
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- 누리캅스 -->
-                    <div class="lostnfound-right box_left">
+                    <div class="lostnfound-right box_right">
                         <div class="title-area">
                             <h3 class="box_title">누리캅스</h3>
                             <small>* 누리캅스는 회원 전용서비스 입니다.</small>
@@ -958,65 +964,30 @@
                             <div class="lookup-box">
                                 <a href="javascript:;" class="lostnfound-right-box">
                                     <div class="square">
-                                        <img src="img/icon/icon_main_nuri01.png" alt="습득물 현황">
+                                        <img src="img/icon/ico-main-nuri-in.png" alt="습득물 현황">
                                     </div>
                                     <div class="text"><span>누리캅스</span><span>소개</span></div>
                                 </a>
                                 <a href="javascript:;" class="lostnfound-right-box">
                                     <div class="square">
-                                        <img src="img/icon/icon_main_nuri02.png" alt="습득물 현황">
+                                        <img src="img/icon/ico-main-nuri-gu.png" alt="습득물 현황">
                                     </div>
                                     <div class="text"><span>가입절차</span><span>안내</span></div>
                                 </a>
                                 <a href="javascript:;" class="lostnfound-right-box">
                                     <div class="square">
-                                        <img src="img/icon/icon_main_nuri03.png" alt="습득물 현황">
+                                        <img src="img/icon/ico-main-nuri-re.png" alt="습득물 현황">
                                     </div>
                                     <div class="text"><span>누리캅스</span><span>신고절차</span></div>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <!-- 유실물 민원 -->
-                    <div class="lostnfound-left box_right">
-                        <h3 class="box_title">유실물 민원</h3>
-                        <div class="lostnfound-action-list">
-                            <a href="javascript:;" class="lostnfound-action">
-                                <div class="circle">
-                                    <img src="img/icon/icon_main_lost01.png" alt="분실물 신고">
-                                </div>
-                                <div class="text"><span>분실물</span><span>신고</span></div>
-                            </a>
-                            <a href="javascript:;" class="lostnfound-action">
-                                <div class="circle">
-                                    <img src="img/icon/icon_main_lost02.png" alt="습득물 검색">
-                                </div>
-                                <div class="text"><span>습득물</span><span>검색</span></div>
-                            </a>
-                            <a href="javascript:;" class="lostnfound-action">
-                                <div class="circle">
-                                    <img src="img/icon/icon_main_lost03.png" alt="습득물 현황">
-                                </div>
-                                <div class="text"><span>습득물</span><span>현황</span></div>
-                            </a>
-                        </div>
-                    </div>
                     <!-- </section> -->
 
                     <!-- 이용안내, 순찰신문고 -->
                     <!-- <section class="info-section"> -->
-                    <div class="patrol-report box_left">
-                        <h3 class="box_title">순찰신문고</h3>
-                        <div class="report-box">
-                            <p>순찰을 희망하는 상세주소를 주변지까지 입력하세요. (예: 백두산로 10길 77 또는 한라산로 77)</p>
-                            <div class="search-form">
-                                <input type="text" placeholder="순찰위치를 지정할 주소를 입력하세요.(예: 동일로 97)">
-                                <button type="submit" class="lookup-btn">조회</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="info-guide box_right">
+                    <div class="info-guide box_left">
                         <h3 class="box_title">이용안내</h3>
                         <div class="guide-cards">
                             <div class="guide-card">
@@ -1037,6 +1008,16 @@
                         </div>
                     </div>
 
+                    <div class="patrol-report box_right">
+                        <h3 class="box_title">순찰신문고</h3>
+                        <div class="report-box">
+                            <p>순찰을 희망하는 상세주소를 주변지까지 입력하세요. <span>(예: 백두산로 10길 77 또는 한라산로 77)</span></p>
+                            <div class="search-form">
+                                <input type="text" placeholder="순찰위치를 지정할 주소를 입력하세요.(예: 동일로 97)">
+                                <button type="submit" class="lookup-btn">조회</button>
+                            </div>
+                        </div>
+                    </div>
                     <!-- </section> -->
                 </section>
                 <!-- wrap_grid end -->
@@ -1117,12 +1098,6 @@
                         </div>
                     </div>
                     <!-- Swiper Navigation Buttons -->
-                    <!-- <button class="swiper-button-prev channel-btn left" aria-label="이전">
-                        <img src="img/component/icon/ico_angle.svg" alt="이전">
-                    </button>
-                    <button class="swiper-button-next channel-btn right" aria-label="다음">
-                        <img src="img/component/icon/ico_angle.svg" alt="다음">
-                    </button> -->
                     <button class="channel-btn left" aria-label="이전">
                         <img src="img/component/icon/ico_angle.svg" alt="이전">
                     </button>
