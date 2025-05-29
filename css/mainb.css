@@ -48,19 +48,16 @@ span {
   padding-top: 3.6rem;
   padding-bottom: 5rem;
   display: grid;
-  display: grid;
   grid-template-areas: "area1 area3" "area2 area3";
   grid-template-columns: 1fr 2fr;
-  -webkit-column-gap: 5.8rem;
-     -moz-column-gap: 5.8rem;
-          column-gap: 5.8rem;
+  grid-template-columns: minmax(665px, 1fr) 2fr;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 
 .hero-left {
   grid-area: area2;
-  -webkit-box-flex: 2;
-      -ms-flex: 2 2 66rem;
-          flex: 2 2 66rem;
   padding-left: 6.4rem;
   padding-right: 6.4rem;
 }
@@ -104,7 +101,9 @@ span {
 
 .hero-right {
   grid-area: area3;
-  max-width: 62rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,9 +111,12 @@ span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0;
+          flex: 0 0;
   gap: 2.4rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .hero-right h2 {
   font-size: 3.2rem;
@@ -144,6 +146,7 @@ span {
   padding-top: 39.8510242086%;
   max-width: 537px;
   max-height: 214px;
+  margin: 0 auto;
 }
 
 .banner-slide {
@@ -259,6 +262,21 @@ span {
   font-size: 1.6rem;
   color: #777;
   /* background: url(/img/icon/ico-main-search.png) no-repeat right 1.2rem center;  월간보고 시연위해 주석 처리 */
+}
+.search-box input::-webkit-input-placeholder {
+  color: #0054a6;
+}
+.search-box input::-moz-placeholder {
+  color: #0054a6;
+}
+.search-box input:-ms-input-placeholder {
+  color: #0054a6;
+}
+.search-box input::-ms-input-placeholder {
+  color: #0054a6;
+}
+.search-box input::placeholder {
+  color: #0054a6;
 }
 .search-box i {
   padding: 2.5rem;
@@ -1575,6 +1593,21 @@ span {
     padding-left: 3%;
     padding-right: 3%;
   }
+  .main-hero {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-template-columns: minmax(590px, 1fr) 2fr;
+  }
+  .wrap_hero_btn .hero_btns {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 1.2rem;
+  }
+  .hero-left {
+    padding-left: unset;
+    padding-right: unset;
+  }
   .hero-right h2 {
     font-size: 2.8rem;
   }
@@ -1644,7 +1677,7 @@ span {
     width: 100%;
   }
 }
-@media (max-width: 1024px) {
+@media all and (max-width: 1024px) {
   .container-main {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
@@ -2327,7 +2360,7 @@ span {
   }
 }
 /* B */
-@media (max-width: 1024px) {
+@media all and (max-width: 1024px) {
   /* 메인 히어로 섹션 */
   .main-hero {
     display: -webkit-box;
